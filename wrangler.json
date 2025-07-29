@@ -10,5 +10,11 @@
   },
   "observability": {
     "enabled": true
+  },
+  "vars": {
+    "WEBFLOW_API_TOKEN": "",
+    "MONUMENTS_COLLECTION_ID": "",
+    "ECOSYSTEM_COLLECTION_ID": "",
+    "WEBFLOW_SITE_ID": ""
   }
 }

@@ -7,6 +7,9 @@ import react from '@astrojs/react';
 // https://astro.build/config
 export default defineConfig({
   base: "/api",
+  build: {
+    assetsPrefix: "/api", // ensure this matches your environment's mount path
+  },
   output: "server",
   adapter: cloudflare({
     platformProxy: {
