@@ -1,46 +1,30 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Section, Container, Block, Link } from '../../devlink/_Builtin/Basic';
 ---
 
 <Layout>
-  <Section
-    client:load
-    tag="section"
-    className="margin-bottom-24px"
-    style={{
-      minHeight: '100vh',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center'
-    }}
+  <section
+    class="margin-bottom-24px"
+    style="min-height: 100vh; display: flex; align-items: center; justify-content: center;"
   >
-    <Container>
-      <Block
-        tag="div"
-        className="hero-split"
-        style={{
-          textAlign: 'center',
-          maxWidth: '600px',
-          margin: '0 auto'
-        }}
+    <div class="container">
+      <div
+        class="hero-split"
+        style="text-align: center; max-width: 600px; margin: 0 auto;"
       >
         <h1 class="margin-bottom-24px">Welcome to Webflow Cloud</h1>
         <p class="margin-bottom-24px">This is a simple test using Basic components with enhanced styling.</p>
-        <div style={{marginTop: '12px'}}>
-          <Link
-            button={true}
-            options={{
-              href: "https://developers.webflow.com/webflow-cloud/getting-started"
-            }}
-            className="button-primary"
+        <div style="margin-top: 12px;">
+          <a
+            href="https://developers.webflow.com/webflow-cloud/getting-started"
+            class="button-primary"
           >
             Get Started
-          </Link>
+          </a>
         </div>
-      </Block>
-    </Container>
-  </Section>
+      </div>
+    </div>
+  </section>
 </Layout>
 
 <style>

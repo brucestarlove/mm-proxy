@@ -1,6 +1,4 @@
 ---
-import { DevLinkProvider } from '../../devlink/DevLinkProvider.jsx';
-import "../../devlink/global.css"; // Webflow Styles
 ---
 
 <!doctype html>
@@ -16,9 +14,7 @@ import "../../devlink/global.css"; // Webflow Styles
 		<title>Webflow Cloud - Astro Starter</title>
 	</head>
 	<body>
-		<DevLinkProvider client:load>
-			<slot />
-		</DevLinkProvider>
+		<slot />
 	</body>
 </html>
 
