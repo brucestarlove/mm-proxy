@@ -1,8 +1,8 @@
 import type { APIRoute } from 'astro';
 
-export const GET: APIRoute = async ({ request }) => {
-  const WEBFLOW_API_TOKEN = import.meta.env.WEBFLOW_API_TOKEN;
-  const ECOSYSTEM_COLLECTION_ID = import.meta.env.ECOSYSTEM_COLLECTION_ID;
+export const GET: APIRoute = async ({ locals }) => {
+  const WEBFLOW_API_TOKEN = locals.runtime.env.WEBFLOW_API_TOKEN;
+  const ECOSYSTEM_COLLECTION_ID = locals.runtime.env.ECOSYSTEM_COLLECTION_ID;
 
   if (!WEBFLOW_API_TOKEN || !ECOSYSTEM_COLLECTION_ID) {
     return new Response(JSON.stringify({ error: 'Missing API credentials' }), {

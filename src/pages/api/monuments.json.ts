@@ -1,8 +1,8 @@
 import type { APIRoute } from 'astro';
 
-export const GET: APIRoute = async ({ request }) => {
-  const WEBFLOW_API_TOKEN = import.meta.env.WEBFLOW_API_TOKEN;
-  const MONUMENTS_COLLECTION_ID = import.meta.env.MONUMENTS_COLLECTION_ID;
+export const GET: APIRoute = async ({ locals }) => {
+  const WEBFLOW_API_TOKEN = locals.runtime.env.WEBFLOW_API_TOKEN;
+  const MONUMENTS_COLLECTION_ID = locals.runtime.env.MONUMENTS_COLLECTION_ID;
 
 
   if (!WEBFLOW_API_TOKEN || !MONUMENTS_COLLECTION_ID) {
